@@ -5,10 +5,32 @@
     <meta charset="UTF-8">
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
     <meta name="description" content="BuyCan - Privacy Policy">
+    <!-- Added Open Graph tags for better social media sharing -->
+    <meta property="og:title" content="Privacy Policy | BuyCan">
+    <meta property="og:description" content="BuyCan privacy policy - how we handle your information">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://yourwebsite.com/policy.html">
+    <!-- Added theme color for mobile browsers -->
+    <meta name="theme-color" content="#1a5276">
     <title>Privacy Policy | BuyCan</title>
     <link rel="stylesheet" href="styles.css">
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet">
-    <link rel="icon" href="/images/favicon.ico" type="image/x-icon">
+    <!-- Consistent favicon reference -->
+    <link rel="icon" href="images/onlyleaf.png" type="image/png">
+
+    <style>
+        /* Inline style for logo link - you can alternatively add this to your styles.css file */
+        .logo-link {
+            display: flex;
+            align-items: center;
+            text-decoration: none;
+            color: inherit;
+        }
+
+        .logo-link:hover {
+            opacity: 0.9;
+        }
+    </style>
 </head>
 
 <body>
@@ -16,8 +38,11 @@
     <header class="nav-bar">
         <div class="nav-container">
             <div class="nav-logo">
-                <img src="/images/logo.png" alt="BuyCan Logo" height="40">
-                <h1>BuyCan</h1>
+                <!-- Added link to home page around logo and text -->
+                <a href="index.html" class="logo-link">
+                    <img src="images/logo2.png" alt="BuyCan Logo" height="40">
+                    <h1>BuyCan</h1>
+                </a>
             </div>
             <nav class="nav-links">
                 <a href="index.html">Home</a>
@@ -29,6 +54,7 @@
         </div>
     </header>
 
+    <!-- Rest of your policy.html content remains unchanged -->
     <!-- Privacy Policy Content -->
     <section class="policy-section section-light">
         <div class="container">
@@ -68,7 +94,7 @@
 
                 <div class="policy-item">
                     <h3>Contact Us</h3>
-                    <p>If you have any questions or concerns regarding this Privacy Policy, please contact us at: <a href="https://mail.google.com/mail/?view=cm&fs=1&to=BuyCanadianApp@gmail.com" target="_blank">BuyCanadianApp@gmail.com</a>, or on Instagram <a href="https://www.instagram.com/BuyCanApp" target="_blank">@BuyCanApp</a>.</p>
+                    <p>If you have any questions or concerns regarding this Privacy Policy, please contact us at: <a href="https://mail.google.com/mail/?view=cm&fs=1&to=BuyCanadianApp@gmail.com" target="_blank" rel="noopener noreferrer">BuyCanadianApp@gmail.com</a>, or on Instagram <a href="https://www.instagram.com/BuyCanApp" target="_blank" rel="noopener noreferrer">@BuyCanApp</a>.</p>
                 </div>
 
                 <div class="policy-footer">
@@ -102,8 +128,8 @@
             <div class="footer-column">
                 <h3>Connect</h3>
                 <ul>
-                    <li><a href="https://mail.google.com/mail/?view=cm&fs=1&to=buycanadianapp@gmail.com" target="_blank">Email Us</a></li>
-                    <li><a href="https://www.instagram.com/BuyCanApp" target="_blank">Instagram</a></li>
+                    <li><a href="https://mail.google.com/mail/?view=cm&fs=1&to=buycanadianapp@gmail.com" target="_blank" rel="noopener noreferrer">Email Us</a></li>
+                    <li><a href="https://www.instagram.com/BuyCanApp" target="_blank" rel="noopener noreferrer">Instagram</a></li>
                 </ul>
             </div>
         </div>
@@ -111,6 +137,36 @@
             <p>&copy; 2025 BuyCan. All rights reserved.</p>
         </div>
     </footer>
+
+    <!-- Back to top button with white stroke color for better visibility -->
+    <a href="#" class="back-to-top" aria-label="Back to top">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <polyline points="18 15 12 9 6 15"></polyline>
+        </svg>
+    </a>
+
+    <!-- Script for the "Back to Top" button functionality -->
+    <script>
+        // Function to handle the back to top button
+        window.onscroll = function() {
+            const backToTopButton = document.querySelector('.back-to-top');
+
+            if (document.body.scrollTop > 300 || document.documentElement.scrollTop > 300) {
+                backToTopButton.classList.add('visible');
+            } else {
+                backToTopButton.classList.remove('visible');
+            }
+        };
+
+        // Add click event to back to top button
+        document.querySelector('.back-to-top').addEventListener('click', function(e) {
+            e.preventDefault();
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        });
+    </script>
 </body>
 
 </html>
